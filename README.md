@@ -1,7 +1,6 @@
 # mercadoApp2
 
-This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
-version 10.0.0
+Este proyecto es una aplicacion para el control de stock de mercado libre de manera masiva :star:
 
 # Getting started
 
