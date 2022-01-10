@@ -7,6 +7,7 @@ import { SharedModule } from '@shared';
 import { MaterialModule } from '@app/material.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { TableDefaultModule } from '@app/@shared/table-default/table-default.module';
 
 @NgModule({
   imports: [
@@ -15,10 +16,9 @@ import { HomeComponent } from './home.component';
     SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    TableDefaultModule,
   ],
-  declarations: [
-    HomeComponent
-  ]
+  declarations: [HomeComponent],
 })
-export class HomeModule { }
+export class HomeModule {}

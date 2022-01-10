@@ -10,6 +10,11 @@ export const environment = {
   production: true,
   version: env.npm_package_version,
   serverUrl: 'https://api.chucknorris.io',
-  defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US', 'es-ES']
+  defaultLanguage: 'es-ES',
+  supportedLanguages: ['en-US', 'es-ES'],
+  grant_type: 'authorization_code',
+  client_id: '5002910318076066',
+  client_secret: 'B46Y2ysxmR4aHfmcAnCGOuyrBdtpdOUh',
+  redirect_uri: 'https://mercado-app-333415.ey.r.appspot.com',
+  mercado_libre_api: 'https://api.mercadolibre.com/',
 };

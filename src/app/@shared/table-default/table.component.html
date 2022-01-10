@@ -1,0 +1,32 @@
+<mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input />
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <caption>
+      {{
+        tableCaption
+      }}
+    </caption>
+    <ng-container [matColumnDef]="headers" *ngFor="let headers of objectKeys(columnHeader)">
+      <th style="text-align: center" id="{{ columnHeader[headers] }}" mat-header-cell *matHeaderCellDef mat-sort-header>
+        {{ columnHeader[headers] }}
+      </th>
+      <div *ngIf="columnHeader[headers] !== 'Edit'">
+        <td mat-cell *matCellDef="let element">{{ element[headers] }}</td>
+      </div>
+      <div *ngIf="columnHeader[headers] === 'Edit'">
+        <td mat-cell *matCellDef="let element">
+          <button mat-button (click)="onEdit(element)">edit</button>
+        </td>
+      </div>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="objectKeys(columnHeader)"></tr>
+    <tr mat-row *matRowDef="let row; columns: objectKeys(columnHeader)"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="tableSizeOptions" aria-label="Select page"></mat-paginator>
+</div>

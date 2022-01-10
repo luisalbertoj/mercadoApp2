@@ -9,6 +9,8 @@ import { MaterialModule } from '@app/material.module';
 import { I18nModule } from '@app/i18n';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login.component';
+import { MercadoLoginComponent } from './components/mercado-login/mercado-login.component';
+import { ProcessTokenComponent } from './components/process-token/process-token.component';
 
 @NgModule({
   imports: [
@@ -19,10 +21,8 @@ import { LoginComponent } from './login.component';
     FlexLayoutModule,
     MaterialModule,
     I18nModule,
-    AuthRoutingModule
+    AuthRoutingModule,
   ],
-  declarations: [
-    LoginComponent
-  ]
+  declarations: [LoginComponent, MercadoLoginComponent, ProcessTokenComponent],
 })
-export class AuthModule { }
+export class AuthModule {}

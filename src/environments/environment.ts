@@ -14,8 +14,15 @@ export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
   serverUrl: '/api',
-  defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US', 'es-ES']
+  defaultLanguage: 'es-ES',
+  supportedLanguages: ['en-US', 'es-ES'],
+  grant_type: 'authorization_code',
+  /*  client_id: '5205237277579034',
+  client_secret: 'BEozKYj5UIC7THK2K8ReeXiAALDdf3dl', */
+  client_id: '5002910318076066',
+  client_secret: 'B46Y2ysxmR4aHfmcAnCGOuyrBdtpdOUh',
+  redirect_uri: 'https://mercado-app-333415.ey.r.appspot.com',
+  mercado_libre_api: 'https://api.mercadolibre.com/',
 };
 
 /*
